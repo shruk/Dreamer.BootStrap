@@ -1,0 +1,39 @@
+﻿@import '_test';
+
+
+.class1,
+.class2 {
+    color: red;
+}
+
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+.variable {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+//nesting syntax to select elements
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+
+
+

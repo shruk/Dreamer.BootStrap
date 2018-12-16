@@ -1,0 +1,8 @@
+{
+  "name": "BootStrap",
+  "description": "test bootstrap",
+  "main": "",
+  "dependencies": {
+    "bootstrap": "v3.3.7"
+  }
+}

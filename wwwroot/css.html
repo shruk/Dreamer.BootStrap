@@ -1,0 +1,733 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Css Test</title>
+    <link href="css/css.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="BG">
+        <h1>Background-Color</h1>
+
+        <label class="switch">
+            <input type="checkbox" onclick="toggleBGBlue()">
+            <span class="slider round"></span>
+            <pre>BG-Blue</pre>
+        </label>
+        <label class="switch">
+            <input type="checkbox" onclick="toggleBGOrange()">
+            <span class="slider round"></span>
+            <pre>BG-Orange</pre>
+        </label>
+        <script>
+            function toggleBGBlue() {
+                var elements = document.querySelectorAll("#BG p");
+                elements.forEach(function (element) { element.classList.toggle("bgBlue"); })
+
+            }
+            function toggleBGOrange() {
+                var elements = document.querySelectorAll("#BG p");
+                elements.forEach(function (element) { element.classList.toggle("bgTomato"); })
+
+            }
+        </script>
+        <style>
+            .bgBlue {
+                background-color:dodgerblue;
+            }
+            .bgTomato {
+                background-color:tomato;
+            }
+        </style>
+        <div class="test"><p>Change my BG color</p></div>
+    </div>
+    
+        <hr / >
+
+        <div id="HW">
+            <h1> Height and width:</h1>
+            <p>
+                <pre>
+                By default, the width and height of an element is calculated like this:
+                width + padding + border = actual width of an element
+                height + padding + border = actual height of an element
+                </pre>
+                <pre>
+                box-sizing:border-box on an element will include both padding and border into width and height
+                </pre>
+            </p>
+            <!--switch-->
+            <label class="switch">
+                <input type="checkbox" onclick="toggleHW()">
+                <span class="slider round"></span>
+                <pre>HW</pre>
+            </label>
+            <label class="switch">
+                <input type="checkbox" onclick="toggleHWP()">
+                <span class="slider round"></span>
+                <pre>HW --Add Padding</pre>
+            </label>
+            <label class="switch">
+                <input type="checkbox" onclick="toggleHWBS()">
+                <span class="slider round"></span>
+                <pre>HW --Add Box Sizing</pre>
+            </label>
+            <label class="switch">
+                <input type="checkbox" onclick="toggleHWMA()">
+                <span class="slider round"></span>
+                <pre>HW --Add Margin</pre>
+            </label>
+            <!--script-->
+            <script>
+                function toggleHW() {
+                    var elements = document.querySelectorAll("#HW .test p");
+                    elements.forEach(function (element) { element.classList.toggle("hw"); })
+
+                }
+                function toggleHWP() {
+                    var elements = document.querySelectorAll("#HW .test p");
+                    elements.forEach(function (element) { element.classList.toggle("hwp"); })
+
+                } function toggleHWBS() {
+                    var elements = document.querySelectorAll("#HW .test p");
+                    elements.forEach(function (element) { element.classList.toggle("hwbs"); })
+
+                } function toggleHWMA() {
+                    var elements = document.querySelectorAll("#HW .test p");
+                    elements.forEach(function (element) { element.classList.toggle("hwma"); })
+
+                }
+            </script>
+            <!--style-->
+            <style>
+                .hw {
+                    height: 200px;
+                    width: 50%;
+                    background-color: powderblue;
+                }
+
+                .hwp {
+                    height: 200px;
+                    width: 50%;
+                    padding: 50px;
+                    background-color: powderblue;
+                }
+
+                .hwbs {
+                    height: 200px;
+                    width: 50%;
+                    padding: 50px;
+                    background-color: powderblue;
+                    box-sizing: border-box;
+                }
+
+                .hwma {
+                    height: 200px;
+                    width: 50%;
+                    margin: 50px;
+                    background-color: powderblue;
+                }
+            </style>
+            <!--content-->
+
+            <div class="test">
+                <p class="dashed"> This div element has a height of 200px and a width of 50%:</p>
+            </div>
+        </div>
+                    <hr />
+
+            
+
+
+                    <h1 > Box Model</h1 >
+
+                    <span > The box has light grey bg, width doesnt help much here, border 25px with green, padding 50 px and margin of 25px</span >
+                    <div style="height:100px" > </div >
+                    <div class="test" >
+                        <span class="boxModel" > test css box modelsafdaaaaaaaaaaaaaaaaaaaaaaaaaa</span >
+                    </div >
+                    <div style="height:100px" > </div >
+                    <hr />
+
+                    <h1 > Display Property</h1 >
+
+
+                    <p > A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can). div, h1, p, form, header, footer, secion</p >
+                    <p > An inline element does not start on a new line and only takes up as much width as necessary. span, a, img</p >
+
+                    <h3 > display:inline</h3 >
+                    <p > Display a list of links as a horizontal menu:</p >
+                    <div class="test" >
+                        <ul class="li" >
+                            <li > <a href="" target="_blank" > HTML</a > </li >
+                            <li > <a href="" target="_blank" > CSS</a > </li >
+                            <li > <a href="" target="_blank" > JavaScript</a > </li >
+                        </ul >
+                    </div >
+                    <h3 > display:block (this will make an element has block feature, i.e. take up whole space)</h3 >
+                    <div class="test" >
+                        <span style="display:block" > A display property with a value of "block" results in</span > <span style="display:block" > a line break between the two elements.</span >
+                    </div >
+                    <h3 > display:none</h3 >
+                    <p > Notice that the h1 element with display: none; does not take up any space.</p >
+                    <div class="test" >
+                        <h4 > top part, the part below is hidden</h4 >
+                        <h1 class="hidden" > This is a hidden heading</h1 >
+                        <h4 > bottom part, the part above is hidden</h4 >
+                    </div >
+
+                    <h3 > visibility:hidden</h3 >
+                    <p > Notice that the h1 element with visibility: none; Does take up any space.</p >
+                    <div class="test" >
+                        <h4 > top part, the part below is hidden</h4 >
+                        <h1 style="visibility:hidden" > This is a hidden heading</h1 >
+                        <h4 > bottom part, the part above is hidden</h4 >
+                    </div >
+
+
+                    <h2 > display: inline</h2 >
+                    <div > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a" > Aliquam</span > <span class="a" > venenatis</span > gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div >
+
+                    <h2 > display: inline-block</h2 >
+                    <div > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b" > Aliquam</span > <span class="b" > venenatis</span > gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div >
+
+                    <h2 > display: block</h2 >
+                    <div > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c" > Aliquam</span > <span class="c" > venenatis</span > gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div >
+                    <hr />
+                    <h1 > Position Property</h1 >
+
+                    <p > The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p >
+
+
+                    <h3 > static position</h3 >
+                    <div class="static" > static position is not going to move even we have a left attributes, it is a default position</div >
+
+                    <div style="height:10px" > </div >
+
+                    <h3 > relative position</h3 >
+                    <div class="test" >
+                        <div class="relative" > relative position can be changed based on top, buttom, left and right from its normal position</div >
+                    </div >
+                    <div style="height:10px" > </div >
+
+                    <div class="fixed" > fixed position always stays in the same place even the page scrolled</div >
+
+                    <h3 > absolute position is positioned relative to nearest positioned ancestor</h3 >
+                    <h4 > Note: A "positioned" element is one whose position is anything except static.</h4 >
+                    <div class="relative2" >
+                        This div element has position: relative;
+                    <div class="absolute" > This div element has position: absolute;</div >
+                    </div >
+
+                    <h3 > Sticky position is between fixed and relative</h3 >
+                    <div class="sticky" > sticky can be relative until its given offset position is met in the viewport--become fixed</div >
+
+
+                    <hr />
+
+                    <h1 > Box Sizing property</h1 >
+                    <p > without box sizing, height and width are controlled by height, width, padding and border</p >
+                    <style >
+                        .div1_box {
+                            width: 300px;
+                        height: 100px;
+                        border: 1px solid blue;
+                    }
+
+                    .div2_box {
+                            width: 300px;
+                        height: 100px;
+                        padding: 50px;
+                        border: 1px solid red;
+                    }
+                </style>
+                    <div class="div1_box">This div is smaller (width is 300px and height is 100px).</div>
+                    <br>
+                        <div class="div2_box">This div is bigger (width is also 300px and height is 100px).</div>
+
+
+
+                        <hr />
+
+
+                        <h1>OverFlow</h1>
+
+                        <p>controls what happens to content that is too big to fit into an area</p>
+
+
+                        <h3>overflow:scroll</h3>
+
+                        <div id="overflowScroll">
+                            This text is really long and the height of its container is only 100 pixels.
+                            Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+                            esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber
+                            tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                            Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                </div>
+
+                        <h3>overflow:hidden</h3>
+
+                        <div id="overflowHidden">
+                            This text is really long and the height of its container is only 100 pixels.
+                            Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+                            esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber
+                            tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                            Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                </div>
+
+                        <h3>overflow:auto</h3>
+
+                        <div id="overflowAuto">
+                            This text is really long and the height of its container is only 100 pixels.
+                            Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet,
+                            consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+                            esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+                            dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber
+                            tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                            Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                </div>
+
+                        <hr />
+                        <h1>Float</h1>
+
+                        <h3>float:right</h3>
+                        <p>
+                            <img style="float:right" src="img/pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </p>
+                            <div style="height:250px"></div>
+
+                            <h3>float:left</h3>
+                            <p>
+                                <img style="float:left" src="img/pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </p>
+                                <div style="height:250px"></div>
+                                <h3>float:none</h3>
+                                <p>
+                                    <img style="float:none" src="img/pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </p>
+
+
+                                    <h3>overflow:auto to clearfix</h3>
+
+                                    <style>
+                                        .clearfix_overflow {
+                                            overflow: auto
+                                    }
+                </style>
+                                    <script>
+
+                                        function clearFix() {
+                        var element = document.getElementById("clearfix_overflowDIV");
+                                        element.classList.toggle("clearfix_overflow");
+                                        var chk = document.getElementById("overFlowchk1");
+                                        var p = document.getElementById("overFlowP");
+                        if (chk.checked) {p.innerText = 'Toggle overflow:auto'}
+                                        else {p.innerText = 'Toggle overflow:visible'}
+                                        }
+
+            </script>
+            <label class="switch">
+                <p id="overFlowP">Toggle overflow:visible</p>
+                <input type="checkbox" id="overFlowchk1" onclick="clearFix()">
+                <span class="slider round"></span>
+            </label>
+            <div class="test">
+                <div id="clearfix_overflowDIV">
+                    <p>
+                        <img style="float:left" src="img/pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                    </p>
+                </div>
+            </div>
+            <div style="height:250px"></div>
+            <hr />
+
+
+
+            <h1>Clear Property</h1>
+            <p>none - Allows floating elements on both sides. This is default</p>
+
+            <pre><code>clear:left </code></pre>
+            <style>
+                .clearleft {
+                    clear: left
+                }
+            </style>
+            <script>
+                function clearLeft() {
+var element = document.getElementById("clearLeftDIV");
+                element.classList.toggle("clearleft");
+                var chk = document.getElementById("clearLeftchk1");
+                var p = document.getElementById("clearLeftP");
+if (chk.checked) {p.innerText = 'toggle clear:left'}
+                else {p.innerText = 'toggle clear:none'}
+                }
+            </script>
+            <label class="switch">
+                <p id="clearLeftP">Toggle clear:none</p>
+                <input type="checkbox" id="clearLeftchk1" onclick="clearLeft()">
+                <span class="slider round"></span>
+            </label>
+
+
+            <h2>clear:left</h2>
+            <div class="div3">div3</div>
+            <div style="border: 1px solid red;" id="clearLeftDIV">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+            <h3>Float boxes side by side</h3>
+
+            <div class="clearfix">
+                <div class="box" style="background-color:#bbb">
+                    <p>Some text inside the box.</p>
+                </div>
+                <div class="box" style="background-color:#ccc">
+                    <p>Some text inside the box.</p>
+                </div>
+                <div class="box" style="background-color:#ddd">
+                    <p>Some text inside the box.</p>
+                </div>
+            </div>
+
+            <p>Note that we also use the clearfix hack to take care of the layout flow, and that add the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+
+            <div id="testTable">
+                <h1>Table Style</h1>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleBorder()">
+                    <span class="slider round"></span>
+                    <pre>border(border)</pre>
+                </label>
+
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleHover()">
+                    <span class="slider round"></span>
+                    <pre>Hover(:hover)</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleStriped()">
+                    <span class="slider round"></span>
+                    <pre>Striped effect(:nth-child(even))</pre>
+                </label>
+
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleHeader()">
+                    <span class="slider round"></span>
+                    <pre>Header effect(select th)</pre>
+                </label>
+
+                <style>
+                    .tableborder { /*comma inbetween is short way to put them together*/
+                        border: 1px solid black;
+                    }
+
+                    .rowhover:hover {
+                        background-color: #f5f5f5;
+                    }
+
+                    .rowstripe:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+
+                    .thheader {
+                        background-color: #4CAF50;
+                        color: white;
+                    }
+                </style>
+                <script>
+                    function toggleBorder() {
+        var elements = document.querySelectorAll("#testTable table,#testTable th,#testTable td");
+        elements.forEach(function (element) {element.classList.toggle("tableborder"); })
+
+                }
+    function toggleHover() {
+        var elements = document.querySelectorAll("#testTable tr");
+        elements.forEach(function (element) {element.classList.toggle("rowhover"); })
+
+                }
+    function toggleStriped() {
+        var elements = document.querySelectorAll("#testTable tr");
+        elements.forEach(function (element) {element.classList.toggle("rowstripe"); })
+
+                }
+    function toggleHeader() {
+        var elements = document.querySelectorAll("#testTable th");
+        elements.forEach(function (element) {element.classList.toggle("thheader"); })
+
+                }
+                </script>
+
+                <table>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+            <div id="SBorder">
+                <h3>single border -- border-collapse:collapse</h3>
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleSBorder()">
+                    <span class="slider round"></span>
+                    <pre>table border-collapse:collapse</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleTBorder()">
+                    <span class="slider round"></span>
+                    <pre>table only border-collapse:collapse</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleBBorder()">
+                    <span class="slider round"></span>
+                    <pre>divider only border-bottom</pre>
+                </label>
+
+                <style>
+                    .stable {
+                        border-collapse: collapse;
+                    }
+
+
+                    .sborder { /*comma inbetween is short way to put them together*/
+                        border: 1px solid #ddd;
+                    }
+
+                    .ttable {
+                        border-collapse: collapse;
+                        border: 1px solid #ddd;
+                    }
+
+                    .brow {
+                        padding: 8px;
+                        text-align: left;
+                        border-bottom: 1px solid #ddd;
+                    }
+                </style>
+                <script>
+                    function toggleSBorder() {
+        var elements = document.querySelectorAll("#SBorder table,#SBorder th,#SBorder td");
+        elements.forEach(function (element) {element.classList.toggle("sborder"); })
+
+                    var elements = document.querySelectorAll("#SBorder table");
+        elements.forEach(function (element) {element.classList.toggle("stable"); })
+                }
+
+    function toggleTBorder() {
+        var elements = document.querySelectorAll("#SBorder table");
+        elements.forEach(function (element) {element.classList.toggle("ttable"); })
+
+                }
+
+    function toggleBBorder() {
+        var elements = document.querySelectorAll("#SBorder th,#SBorder td");
+        elements.forEach(function (element) {element.classList.toggle("brow"); })
+
+                    var elements = document.querySelectorAll("#SBorder table");
+        elements.forEach(function (element) {element.classList.toggle("stable"); })
+                }
+
+
+                </script>
+
+                <table>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+            <div id="Units">
+                <h1>CSS Units-- absolute</h1>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsCM()">
+                    <span class="slider round"></span>
+                    <pre>Centimeters -- cm</pre>
+                </label>
+
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsMM()">
+                    <span class="slider round"></span>
+                    <pre>Millimeters -- mm</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsIN()">
+                    <span class="slider round"></span>
+                    <pre>inches -- in</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsPX()">
+                    <span class="slider round"></span>
+                    <pre>pixel -- px</pre>
+                </label>
+
+                <h1>CSS Units-- relative</h1>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsEM()">
+                    <span class="slider round"></span>
+                    <pre>relative to font size of element -- em</pre>
+                </label>
+
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsREM()">
+                    <span class="slider round"></span>
+                    <pre>Millimeters -- rem</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsPCT()">
+                    <span class="slider round"></span>
+                    <pre>relative to parent element -- %</pre>
+                </label>
+
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleUnitsVH()">
+                    <span class="slider round"></span>
+                    <pre>relative to 1% of height of viewport -- vh</pre>
+                </label>
+
+                <style>
+                    .pcm {
+                        font-size: 1cm;
+                        line-height: 1cm;
+                    }
+
+                    .pmm {
+                        font-size: 1mm;
+                        line-height: 1mm;
+                    }
+
+                    .pin {
+                        font-size: 1in;
+                        line-height: 1in;
+                    }
+
+                    .ppx {
+                        font-size: 1px;
+                        line-height: 1px;
+                    }
+
+                    .pem {
+                        font-size: 1em;
+                        line-height: 1em;
+                    }
+
+                    .prem {
+                        font-size: 1rem;
+                        line-height: 1rem;
+                    }
+
+                    .pct {
+                        font-size: 1%;
+                        line-height: 1%;
+                    }
+
+                    .pvh {
+                        font-size: 1vh;
+                        line-height: 1vh;
+                    }
+                </style>
+                <script>
+                    function toggleUnitsCM() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("pcm"); })
+
+                }
+
+    function toggleUnitsMM() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("pmm"); })
+
+                }
+
+    function toggleUnitsIN() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("pin"); })
+
+                }
+
+    function toggleUnitsPX() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("ppx"); })
+
+                }
+    function toggleUnitsEM() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("pem"); })
+
+                }
+
+    function toggleUnitsREM() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("prem"); })
+
+                }
+
+    function toggleUnitsPCT() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("pct"); })
+
+                }
+
+    function toggleUnitsVH() {
+        var elements = document.querySelectorAll("#Units p");
+        elements.forEach(function (element) {element.classList.toggle("pvh"); })
+
+                }
+                </script>
+                <p>This is a paragraph.</p>
+
+            </div>
+
+</body>
+</html>

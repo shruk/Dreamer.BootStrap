@@ -1,0 +1,15 @@
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\bin\Debug\netcoreapp2.1\Dreamer.BootStrap.deps.json
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\bin\Debug\netcoreapp2.1\Dreamer.BootStrap.runtimeconfig.json
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\bin\Debug\netcoreapp2.1\Dreamer.BootStrap.runtimeconfig.dev.json
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\bin\Debug\netcoreapp2.1\Dreamer.BootStrap.dll
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\bin\Debug\netcoreapp2.1\Dreamer.BootStrap.pdb
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.csproj.CoreCompileInputs.cache
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.RazorAssemblyInfo.cache
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.RazorAssemblyInfo.cs
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.AssemblyInfoInputs.cache
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.AssemblyInfo.cs
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.RazorTargetAssemblyInfo.cache
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.dll
+C:\Users\yeyon\Source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.pdb
+C:\Users\yeyon\source\dotnet\Workspaces\Dreamer\Dreamer.FrontEnd\src\Dreamer.BootStrap\obj\Debug\netcoreapp2.1\Dreamer.BootStrap.csprojAssemblyReference.cache
